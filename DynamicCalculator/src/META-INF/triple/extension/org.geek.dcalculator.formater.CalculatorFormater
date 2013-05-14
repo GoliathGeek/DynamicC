@@ -1,0 +1,2 @@
+java=org.geek.dcalculator.formater.impl.JavaFormater
+sql=org.geek.dcalculator.formater.impl.SQLFormater

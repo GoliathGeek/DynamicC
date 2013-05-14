@@ -14,6 +14,6 @@ public class Constants {
 	public static final String LINK_AND_JAVA = " && ";
 	public static final String LINK_OR_JAVA = " || ";
 
-	public static final Map<Integer, CalculatorUnit<?>> CALCULATORUNIT_CONTAINER = new ConcurrentHashMap<Integer, CalculatorUnit<?>>();
+	public static final Map<Integer, CalculatorUnit<? extends Number>> CALCULATORUNIT_CONTAINER = new ConcurrentHashMap<Integer, CalculatorUnit<? extends Number>>();
 
 }

@@ -8,20 +8,19 @@ import org.geek.dcalculator.CalculatorRule;
 import org.geek.dcalculator.CalculatorUnit;
 import org.geek.dcalculator.common.Constants;
 import org.geek.dcalculator.formater.CalculatorFormater;
-import org.geek.dcalculator.formater.impl.JavaFormater;
-import org.geek.dcalculator.formater.impl.SQLFormater;
+import org.triple.common.extension.SPIExtension;
 
 public class Client {
 
 	private static Random random = new Random();
 
 	public static void main(String[] args) {
-		
+
 		initCalculatorUnits();
-		
+
 		CalculatorRule startRule = createRule();
-		//CalculatorFormater formulaFormater = new JavaFormater();
-		CalculatorFormater formulaFormater = new SQLFormater();
+		CalculatorFormater formulaFormater = SPIExtension.getExtensionLoader(CalculatorFormater.class).getExtension(
+				"java");
 		Group group = new Group("1", "TestJava", formulaFormater);
 		group.setStartCalculatorRule(startRule);
 		System.out.println(group.toString());
@@ -31,7 +30,7 @@ public class Client {
 		CalculatorUnit<Integer> unitInteger = new CalculatorUnit<Integer>("IntegerUnit");
 		CalculatorUnit<Double> unitDouble = new CalculatorUnit<Double>("DoubleUnit");
 		CalculatorUnit<BigDecimal> unitBigDecimal = new CalculatorUnit<BigDecimal>("BigDecimalUnit");
-		
+
 		Constants.CALCULATORUNIT_CONTAINER.put(0, unitInteger);
 		Constants.CALCULATORUNIT_CONTAINER.put(1, unitDouble);
 		Constants.CALCULATORUNIT_CONTAINER.put(2, unitBigDecimal);
@@ -48,15 +47,16 @@ public class Client {
 	private static void addChildRule(CalculatorRule parentRule) {
 		CalculatorRule childRule = new CalculatorRule();
 		childRule.setLink(2 - random.nextInt(2));
-		for(int i = 0 ;i< random.nextInt(3);i++){
+		for (int i = 0; i < random.nextInt(3); i++) {
 			addChildRule(childRule);
 		}
-		for(int i = 0 ;i< random.nextInt(4);i++){
-			childRule.addCalculator(createCalculator() );
+		for (int i = 0; i < random.nextInt(4); i++) {
+			childRule.addCalculator(createCalculator());
 		}
 		parentRule.addChildRule(childRule);
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private static Calculator createCalculator() {
 		Calculator calculator = new Calculator();
 		calculator.setCalculatorUnit(Constants.CALCULATORUNIT_CONTAINER.get(random.nextInt(3)));
