@@ -4,9 +4,11 @@
 package org.geek.dynamicc;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
- * TODO
+ * 计算单元，包含 数据来源定义 & 处理函数定义
+ * 通过doCalculate方法 得出Number结果
  * @author Cxl
  * @createTime 2013-5-13 
  */
@@ -14,6 +16,10 @@ import java.io.Serializable;
 public class CalculatorUnit<T extends Number> implements Serializable {
 	private String id;
 	private String unitName;
+	// 计算连接符
+	private int sign;
+
+	private List<CalculatorUnit> childUnits;
 
 	public CalculatorUnit(String unitName) {
 		this.unitName = unitName;

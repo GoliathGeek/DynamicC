@@ -1,71 +1,55 @@
 package org.geek.dynamicc;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings("serial")
-public class Calculator<T extends Number> implements Serializable {
-
+public class Calculator implements Serializable {
 	private String id;
-	private String calculatorName;
-	// 计算单元定义
-	// 包含了计算逻辑外的定义，例如数据的获取途径
-	private CalculatorUnit<T> calculatorUnit;
+	private String name;
+	private String func;
+	private String sign;
 
+	private List<Calculator> childCalculator = new ArrayList<Calculator>();
+	private List<CalculatorUnit> units = new ArrayList<CalculatorUnit>();
 	
-	
-	// 连接符
-	private int link;
-	// 逻辑计算符
-	private int logicMark;
-	// 阀值
-	private T keyValue;
-
 	public String getId() {
 		return id;
 	}
-
 	public void setId(String id) {
 		this.id = id;
 	}
-
-	public String getCalculatorName() {
-		return calculatorName;
+	public String getName() {
+		return name;
 	}
-
-	public void setCalculatorName(String calculatorName) {
-		this.calculatorName = calculatorName;
+	public void setName(String name) {
+		this.name = name;
 	}
-
-	public CalculatorUnit<T> getCalculatorUnit() {
-		return calculatorUnit;
+	public String getFunc() {
+		return func;
 	}
-
-	public void setCalculatorUnit(CalculatorUnit<T> calculatorUnit) {
-		this.calculatorUnit = calculatorUnit;
+	public void setFunc(String func) {
+		this.func = func;
 	}
-
-	public T getKeyValue() {
-		return keyValue;
+	public String getSign() {
+		return sign;
 	}
-
-	public void setKeyValue(T keyValue) {
-		this.keyValue = keyValue;
+	public void setSign(String sign) {
+		this.sign = sign;
 	}
-
-	public int getLink() {
-		return link;
+	public List<CalculatorUnit> getUnits() {
+		return units;
 	}
-
-	public void setLink(int link) {
-		this.link = link;
+	public void setUnits(List<CalculatorUnit> units) {
+		this.units = units;
 	}
-
-	public int getLogicMark() {
-		return logicMark;
+	public List<Calculator> getChildCalculator() {
+		return childCalculator;
 	}
-
-	public void setLogicMark(int logicMark) {
-		this.logicMark = logicMark;
+	public void setChildCalculator(List<Calculator> childCalculator) {
+		this.childCalculator = childCalculator;
 	}
-
+	
+	
 }

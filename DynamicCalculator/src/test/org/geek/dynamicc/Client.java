@@ -3,11 +3,11 @@ package test.org.geek.dynamicc;
 import java.math.BigDecimal;
 import java.util.Random;
 
-import org.geek.dynamicc.Calculator;
-import org.geek.dynamicc.CalculatorRule;
+import org.geek.dynamicc.BooleanUnit;
+import org.geek.dynamicc.BooleanExpression;
 import org.geek.dynamicc.CalculatorUnit;
 import org.geek.dynamicc.common.Constants;
-import org.geek.dynamicc.formater.CalculatorFormater;
+import org.geek.dynamicc.formater.BooleanFormater;
 import org.triple.common.extension.SPIExtension;
 
 public class Client {
@@ -16,11 +16,11 @@ public class Client {
 	
 	public static void main(String[] args) {
 		initCalculatorUnits();
-		CalculatorRule startRule = createRule();
-		CalculatorFormater formulaFormater = SPIExtension.getExtensionLoader(CalculatorFormater.class).getExtension(
+		BooleanExpression startExpression = createExpression();
+		BooleanFormater expressionFormater = SPIExtension.getExtensionLoader(BooleanFormater.class).getExtension(
 				"java");
-		Group group = new Group("1", "TestJava", formulaFormater);
-		group.setStartCalculatorRule(startRule);
+		Group group = new Group("1", "Test", expressionFormater);
+		group.setStartExpression(startExpression);
 		System.out.println(group.toString());
 	}
 	
@@ -33,31 +33,31 @@ public class Client {
 		Constants.CALCULATORUNIT_CONTAINER.put(2, unitBigDecimal);
 	}
 
-	private static CalculatorRule createRule() {
-		CalculatorRule mainRule = new CalculatorRule();
-		addChildRule(mainRule);
-		return mainRule;
+	private static BooleanExpression createExpression() {
+		BooleanExpression mainExpression = new BooleanExpression();
+		addChildExpression(mainExpression);
+		return mainExpression;
 	}
 
-	private static void addChildRule(CalculatorRule parentRule) {
-		CalculatorRule childRule = new CalculatorRule();
-		childRule.setLink(2 - random.nextInt(2)); 
+	private static void addChildExpression(BooleanExpression parentExpression) {
+		BooleanExpression childExpression = new BooleanExpression();
+		childExpression.setLink(2 - random.nextInt(2)); 
 		for (int i = 0; i < random.nextInt(3); i++) {
-			addChildRule(childRule);
+			addChildExpression(childExpression);
 		}
 		for (int i = 0; i < random.nextInt(4); i++) {
-			childRule.addCalculator(createCalculator());
+			childExpression.addBooleanUnit(createBooleanUnit());
 		}
-		parentRule.addChildRule(childRule);
+		parentExpression.addChildExpression(childExpression);
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	private static Calculator createCalculator() {
-		Calculator calculator = new Calculator();
-		calculator.setCalculatorUnit(Constants.CALCULATORUNIT_CONTAINER.get(random.nextInt(3)));
-		calculator.setLogicMark(random.nextInt(6));
-		calculator.setKeyValue(random.nextInt(10));
-		calculator.setLink(2 - random.nextInt(2));
-		return calculator;
+	private static BooleanUnit createBooleanUnit() {
+		BooleanUnit booleanUnit = new BooleanUnit();
+		booleanUnit.setCalculatorUnit(Constants.CALCULATORUNIT_CONTAINER.get(random.nextInt(3)));
+		booleanUnit.setLogicMark(random.nextInt(6));
+		booleanUnit.setKeyValue(random.nextInt(10));
+		booleanUnit.setLink(2 - random.nextInt(2));
+		return booleanUnit;
 	}
 }
