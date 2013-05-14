@@ -1,11 +1,11 @@
-package org.geek.dcalculator.formater;
+package org.geek.dynamicc.formater;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.geek.dcalculator.Calculator;
-import org.geek.dcalculator.CalculatorRule;
+import org.geek.dynamicc.Calculator;
+import org.geek.dynamicc.CalculatorRule;
 
 public abstract class AbstractCalculatorFormater implements CalculatorFormater {
 

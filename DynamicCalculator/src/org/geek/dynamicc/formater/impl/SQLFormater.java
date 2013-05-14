@@ -1,8 +1,8 @@
-package org.geek.dcalculator.formater.impl;
+package org.geek.dynamicc.formater.impl;
 
-import org.geek.dcalculator.Calculator;
-import org.geek.dcalculator.common.Constants;
-import org.geek.dcalculator.formater.AbstractCalculatorFormater;
+import org.geek.dynamicc.Calculator;
+import org.geek.dynamicc.common.Constants;
+import org.geek.dynamicc.formater.AbstractCalculatorFormater;
 
 public class SQLFormater extends AbstractCalculatorFormater {
 

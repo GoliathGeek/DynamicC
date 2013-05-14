@@ -1,4 +1,4 @@
-package org.geek.dcalculator;
+package org.geek.dynamicc;
 
 import java.io.Serializable;
 
@@ -7,12 +7,14 @@ public class Calculator<T extends Number> implements Serializable {
 
 	private String id;
 	private String calculatorName;
-	// 计算单元
+	// 计算单元定义
+	// 包含了计算逻辑外的定义，例如数据的获取途径
 	private CalculatorUnit<T> calculatorUnit;
 
+	
+	
 	// 连接符
 	private int link;
-
 	// 逻辑计算符
 	private int logicMark;
 	// 阀值

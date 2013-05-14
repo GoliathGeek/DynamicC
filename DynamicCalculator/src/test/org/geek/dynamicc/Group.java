@@ -1,9 +1,9 @@
-package test.org.geek.dcalculator;
+package test.org.geek.dynamicc;
 
 import java.io.Serializable;
 
-import org.geek.dcalculator.CalculatorRule;
-import org.geek.dcalculator.formater.CalculatorFormater;
+import org.geek.dynamicc.CalculatorRule;
+import org.geek.dynamicc.formater.CalculatorFormater;
 
 @SuppressWarnings("serial")
 public class Group implements Serializable {

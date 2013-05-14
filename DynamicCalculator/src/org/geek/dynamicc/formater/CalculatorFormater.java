@@ -1,6 +1,6 @@
-package org.geek.dcalculator.formater;
+package org.geek.dynamicc.formater;
 
-import org.geek.dcalculator.CalculatorRule;
+import org.geek.dynamicc.CalculatorRule;
 import org.triple.common.extension.SPI;
 
 @SPI("java")

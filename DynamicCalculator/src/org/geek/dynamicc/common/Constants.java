@@ -1,9 +1,9 @@
-package org.geek.dcalculator.common;
+package org.geek.dynamicc.common;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.geek.dcalculator.CalculatorUnit;
+import org.geek.dynamicc.CalculatorUnit;
 
 public class Constants {
 
