@@ -1,2 +1,0 @@
-java=org.geek.dynamicc.formater.impl.JavaFormater
-sql=org.geek.dynamicc.formater.impl.SQLFormater

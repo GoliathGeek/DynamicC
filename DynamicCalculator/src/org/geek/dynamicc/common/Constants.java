@@ -15,7 +15,9 @@ public class Constants {
 	public static final String LINK_AND_JAVA = " && ";
 	public static final String LINK_OR_JAVA = " || ";
 
-	public static final Map<Integer, CalculatorUnit<? extends Number>> CALCULATORUNIT_CONTAINER = new ConcurrentHashMap<Integer, CalculatorUnit<? extends Number>>();
+	public static final Map<Integer, CalculatorUnit> CALCULATORUNIT_CONTAINER = new ConcurrentHashMap<Integer, CalculatorUnit>();
 
-	public static final Map<String, Function> FUNCTION_CAONTAINER = new ConcurrentHashMap<String, Function>();
+	public static final int TYPE_BOOLEAN = 0;
+	public static final int TYPE_CALCULATOR = 1;
+	public static final int TYPE_MIX = 2;
 }

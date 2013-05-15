@@ -1,6 +1,5 @@
 package test.org.geek.dynamicc;
 
-
 public class JAVATest {
 
 	/**
@@ -10,6 +9,7 @@ public class JAVATest {
 	 * @createTime 2013-5-13
 	 */
 	public static void main(String[] args) {
+
 		int IntegerUnit = 0, DoubleUnit = 0, BigDecimalUnit = 0;
 		// 生成结果测试
 		if (((BigDecimalUnit <= 6) || IntegerUnit < 2 && BigDecimalUnit >= 1 || (((DoubleUnit > 8 || IntegerUnit >= 4 || (((IntegerUnit < 8) || DoubleUnit <= 8
@@ -19,6 +19,17 @@ public class JAVATest {
 				&& IntegerUnit > 9 || IntegerUnit >= 5))
 				&& DoubleUnit < 5 && BigDecimalUnit > 2 || BigDecimalUnit > 1) {
 		}
+
+		double CalculatorUnit = 0;
+		double param = 0;
+		double y = (((Math.floor(param))
+				+ (((((((CalculatorUnit)) * Math.floor(param) / CalculatorUnit)) + CalculatorUnit) * Math.floor(param)) - CalculatorUnit
+						* (((((Math.floor(param)) / Math.floor(param) / Math.floor(param))) - CalculatorUnit + Math
+								.floor(param))
+								- CalculatorUnit
+								* ((Math.floor(param)) + CalculatorUnit)
+								* CalculatorUnit - Math.floor(param)) / Math.floor(param)) - Math.floor(param) + CalculatorUnit) / Math
+				.floor(param));
 	}
 
 }

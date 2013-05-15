@@ -2,17 +2,17 @@ package test.org.geek.dynamicc;
 
 import java.io.Serializable;
 
-import org.geek.dynamicc.BooleanExpression;
-import org.geek.dynamicc.formater.BooleanFormater;
+import org.geek.dynamicc.Expression;
+import org.geek.dynamicc.formater.ExpressionFormater;
 
 @SuppressWarnings("serial")
 public class Group implements Serializable {
 	private String id;
 	private String name;
-	private BooleanExpression startExpression;
-	private BooleanFormater formater;
+	private Expression startExpression;
+	private ExpressionFormater formater;
 
-	public Group(String id, String name, BooleanFormater formater) {
+	public Group(String id, String name, ExpressionFormater formater) {
 		this.id = id;
 		this.name = name;
 		this.formater = formater;
@@ -38,11 +38,11 @@ public class Group implements Serializable {
 		return "Group id:" + this.id + " name:" + name + "={" + this.formater.format(getStartExpression()) + "}";
 	}
 
-	public BooleanExpression getStartExpression() {
+	public Expression getStartExpression() {
 		return startExpression;
 	}
 
-	public void setStartExpression(BooleanExpression startExpression) {
+	public void setStartExpression(Expression startExpression) {
 		this.startExpression = startExpression;
 	}
 }
