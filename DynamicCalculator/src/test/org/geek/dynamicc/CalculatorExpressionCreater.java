@@ -14,7 +14,7 @@ public class CalculatorExpressionCreater {
 		if (random.nextInt(2) > 0) {
 			unit.setConstant(random.nextInt(100));
 		}
-		expression.addUnit(unit);
+		expression.setUnit(unit);
 		return expression;
 	}
 

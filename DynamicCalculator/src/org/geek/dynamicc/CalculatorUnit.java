@@ -4,7 +4,7 @@
 package org.geek.dynamicc;
 
 @SuppressWarnings("serial")
-public class CalculatorUnit extends Unit {
+public class CalculatorUnit extends Unit implements Calculable {
 	public CalculatorUnit(String name) {
 		super(name);
 	}
@@ -38,5 +38,11 @@ public class CalculatorUnit extends Unit {
 
 	public void setConstantFlag(boolean constantFlag) {
 		this.constantFlag = constantFlag;
+	}
+
+	@Override
+	public Number doCalculate() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

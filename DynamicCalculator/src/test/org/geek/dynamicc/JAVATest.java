@@ -9,20 +9,19 @@ public class JAVATest {
 	 * @createTime 2013-5-13
 	 */
 	public static void main(String[] args) {
-
+		int t = 0 & 1;
+		Boolean l;
+		System.out.println(t);
 		double CalculatorUnit = 0;
 		double param = 0;
 		// 生成结果测试
-		if ((floor(36) < floor(param)
-				|| floor(26) < floor(44)
-				|| (((((CalculatorUnit > CalculatorUnit) && CalculatorUnit <= floor(param)
-						&& (CalculatorUnit < floor(13) || (floor(param) != CalculatorUnit) && floor(25) == floor(96)) && floor(23) >= floor(param)) && CalculatorUnit <= floor(19)) || CalculatorUnit <= floor(47))
-						|| CalculatorUnit == CalculatorUnit || CalculatorUnit > CalculatorUnit) || CalculatorUnit != floor(66))
-				&& floor(param) > floor(param) && floor(param) > CalculatorUnit) {
+		if (floor(78) == floor(param)
+				&& (floor(17) == CalculatorUnit || (floor(33) == CalculatorUnit || (CalculatorUnit != floor(1)
+						&& floor(param) < CalculatorUnit
+						|| (floor((floor(0) * (CalculatorUnit + (floor(88) + (CalculatorUnit - floor(10) - (CalculatorUnit - floor(35))))))) == floor(param) || (floor(47) < CalculatorUnit || floor(6) > floor(53))) || (floor(param) != CalculatorUnit || CalculatorUnit > floor(85)))))) {
 		}
 
-		double y = (((((floor(83) + floor(param) / CalculatorUnit) - floor(53) / CalculatorUnit * floor(param))) / CalculatorUnit) - floor(param)
-				* floor(11));
+		double y = (floor(0) * (CalculatorUnit + (floor(88) + (CalculatorUnit - floor(10) - (CalculatorUnit - floor(35))))));
 	}
 
 	private static double floor(Number number) {

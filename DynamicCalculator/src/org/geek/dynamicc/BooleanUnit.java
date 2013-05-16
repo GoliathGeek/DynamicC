@@ -1,11 +1,13 @@
 package org.geek.dynamicc;
 
 @SuppressWarnings("serial")
-public class BooleanUnit extends Unit {
+public class BooleanUnit extends Unit implements Calculable {
 
 	public BooleanUnit(String name) {
 		super(name);
 	}
+
+	private boolean negation = false;
 
 	private Expression left;
 	// 逻辑计算符
@@ -34,6 +36,12 @@ public class BooleanUnit extends Unit {
 
 	public void setLeft(Expression left) {
 		this.left = left;
+	}
+
+	@Override
+	public Number doCalculate() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

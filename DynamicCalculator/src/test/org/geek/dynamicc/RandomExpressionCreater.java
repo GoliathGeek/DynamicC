@@ -39,12 +39,18 @@ public class RandomExpressionCreater {
 		if (this.createType == Constants.TYPE_BOOLEAN) {
 			childExpression.setLink(2 - random.nextInt(2));
 			for (int i = 0; i < random.nextInt(3); i++) {
-				childExpression.addUnit(createBooleanUnit());
+				Expression unitExpression = new Expression();
+				unitExpression.setLink(2 - random.nextInt(2));
+				unitExpression.setUnit(createBooleanUnit());
+				childExpression.addChildExpression(unitExpression);
 			}
 		} else if (this.createType == Constants.TYPE_CALCULATOR) {
 			childExpression.setLink(6 - random.nextInt(4));
 			for (int i = 0; i < random.nextInt(3); i++) {
-				childExpression.addUnit(createCalculatorUnit());
+				Expression unitExpression = new Expression();
+				unitExpression.setLink(6 - random.nextInt(4));
+				unitExpression.setUnit(createCalculatorUnit());
+				childExpression.addChildExpression(unitExpression);
 			}
 		} else if (this.createType == Constants.TYPE_MIX) {
 
@@ -66,7 +72,6 @@ public class RandomExpressionCreater {
 
 	private Unit createCalculatorUnit() {
 		CalculatorUnit calculatorUnit = new CalculatorUnit("CalculatorUnit");
-		calculatorUnit.setLink(6 - random.nextInt(4));
 		if (random.nextInt(2) > 0) {
 			calculatorUnit.setFunction(createFunc());
 		}
@@ -80,16 +85,17 @@ public class RandomExpressionCreater {
 			booleanUnit.setRight(cCreater.createExpression());
 		} else {
 			Expression leftExpression = new Expression();
-			leftExpression.addUnit(createCalculatorUnit());
+			leftExpression.setLink(6 - random.nextInt(4));
+			leftExpression.setUnit(createCalculatorUnit());
 			booleanUnit.setLeft(leftExpression);
 
 			Expression rightExpression = new Expression();
-			rightExpression.addUnit(createCalculatorUnit());
+			rightExpression.setLink(6 - random.nextInt(4));
+			rightExpression.setUnit(createCalculatorUnit());
 			booleanUnit.setRight(rightExpression);
 		}
 
 		booleanUnit.setLogicMark(random.nextInt(6));
-		booleanUnit.setLink(2 - random.nextInt(2));
 		return booleanUnit;
 	}
 }

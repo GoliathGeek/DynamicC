@@ -5,18 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("serial")
-public class Expression implements Serializable {
+public class Expression implements Serializable, Calculable {
 	private String id;
 	private String name;
 	// 连接符
 	private int link;
 
 	protected List<Expression> childExpressions = new ArrayList<Expression>();
-	protected List<Unit> units = new ArrayList<Unit>();
-
-	public void addUnit(Unit unit) {
-		this.units.add(unit);
-	}
+	private Unit unit;
 
 	public void addChildExpression(Expression childExpression) {
 		this.childExpressions.add(childExpression);
@@ -46,19 +42,25 @@ public class Expression implements Serializable {
 		this.childExpressions = childExpressions;
 	}
 
-	public List<Unit> getUnits() {
-		return units;
-	}
-
-	public void setUnits(List<Unit> units) {
-		this.units = units;
-	}
-
 	public int getLink() {
 		return link;
 	}
 
 	public void setLink(int link) {
 		this.link = link;
+	}
+
+	public Unit getUnit() {
+		return unit;
+	}
+
+	public void setUnit(Unit unit) {
+		this.unit = unit;
+	}
+
+	@Override
+	public Number doCalculate() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

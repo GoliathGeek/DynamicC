@@ -6,16 +6,6 @@ import java.io.Serializable;
 public class Unit implements Serializable {
 	private String id;
 	private String name;
-	// 连接符
-	private int link;
-
-	public int getLink() {
-		return link;
-	}
-
-	public void setLink(int link) {
-		this.link = link;
-	}
 
 	public Unit(String name) {
 		this.name = name;
