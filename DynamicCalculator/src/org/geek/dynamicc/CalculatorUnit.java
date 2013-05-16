@@ -3,17 +3,15 @@
  */
 package org.geek.dynamicc;
 
-/**
- * 计算单元，包含 数据来源定义 & 处理函数定义
- * 通过doCalculate方法 得出Number结果
- * @author Cxl
- * @createTime 2013-5-13 
- */
 @SuppressWarnings("serial")
 public class CalculatorUnit extends Unit {
 	public CalculatorUnit(String name) {
 		super(name);
 	}
+
+	private boolean constantFlag = false;
+
+	private Number constant;
 
 	private Function function;
 
@@ -23,5 +21,22 @@ public class CalculatorUnit extends Unit {
 
 	public void setFunction(Function function) {
 		this.function = function;
+	}
+
+	public Number getConstant() {
+		return constant;
+	}
+
+	public void setConstant(Number constant) {
+		this.constant = constant;
+		this.setConstantFlag(true);
+	}
+
+	public boolean isConstantFlag() {
+		return constantFlag;
+	}
+
+	public void setConstantFlag(boolean constantFlag) {
+		this.constantFlag = constantFlag;
 	}
 }

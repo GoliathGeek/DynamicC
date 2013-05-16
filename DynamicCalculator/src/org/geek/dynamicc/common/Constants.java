@@ -4,7 +4,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.geek.dynamicc.CalculatorUnit;
-import org.geek.dynamicc.Function;
 
 public class Constants {
 

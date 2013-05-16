@@ -1,7 +1,7 @@
 package org.geek.dynamicc.formater.impl;
 
-import org.geek.dynamicc.CalculatorUnit;
-import org.geek.dynamicc.Unit;
+import java.util.HashSet;
+
 import org.geek.dynamicc.common.Constants;
 import org.geek.dynamicc.formater.AbstractExpressionFormater;
 
@@ -20,22 +20,14 @@ public class SQLFormater extends AbstractExpressionFormater {
 		operatorsMap.put(4, " >= ");
 		operatorsMap.put(5, " <= ");
 
-		linkMap.put(0, "");
 		linkMap.put(1, Constants.LINK_AND_SQL);
 		linkMap.put(2, Constants.LINK_OR_SQL);
 		linkMap.put(3, "+");
 		linkMap.put(4, "-");
 		linkMap.put(5, "*");
 		linkMap.put(6, "/");
+		linkSet = new HashSet<String>(linkMap.values());
+
 	}
 
-	@Override
-	protected String doFormat(Unit unit) {
-		StringBuffer strBuf = new StringBuffer();
-		if (unit instanceof CalculatorUnit) {
-			CalculatorUnit cUnit = (CalculatorUnit) unit;
-			strBuf.append(cUnit.getName());
-		}
-		return strBuf.toString();
-	}
 }

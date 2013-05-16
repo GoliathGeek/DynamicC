@@ -10,26 +10,22 @@ public class JAVATest {
 	 */
 	public static void main(String[] args) {
 
-		int IntegerUnit = 0, DoubleUnit = 0, BigDecimalUnit = 0;
-		// 生成结果测试
-		if (((BigDecimalUnit <= 6) || IntegerUnit < 2 && BigDecimalUnit >= 1 || (((DoubleUnit > 8 || IntegerUnit >= 4 || (((IntegerUnit < 8) || DoubleUnit <= 8
-				&& DoubleUnit > 1)
-				|| DoubleUnit <= 9 || DoubleUnit == 8)
-				&& IntegerUnit == 2) && BigDecimalUnit >= 6)
-				&& IntegerUnit > 9 || IntegerUnit >= 5))
-				&& DoubleUnit < 5 && BigDecimalUnit > 2 || BigDecimalUnit > 1) {
-		}
-
 		double CalculatorUnit = 0;
 		double param = 0;
-		double y = (((Math.floor(param))
-				+ (((((((CalculatorUnit)) * Math.floor(param) / CalculatorUnit)) + CalculatorUnit) * Math.floor(param)) - CalculatorUnit
-						* (((((Math.floor(param)) / Math.floor(param) / Math.floor(param))) - CalculatorUnit + Math
-								.floor(param))
-								- CalculatorUnit
-								* ((Math.floor(param)) + CalculatorUnit)
-								* CalculatorUnit - Math.floor(param)) / Math.floor(param)) - Math.floor(param) + CalculatorUnit) / Math
-				.floor(param));
+		// 生成结果测试
+		if ((floor(36) < floor(param)
+				|| floor(26) < floor(44)
+				|| (((((CalculatorUnit > CalculatorUnit) && CalculatorUnit <= floor(param)
+						&& (CalculatorUnit < floor(13) || (floor(param) != CalculatorUnit) && floor(25) == floor(96)) && floor(23) >= floor(param)) && CalculatorUnit <= floor(19)) || CalculatorUnit <= floor(47))
+						|| CalculatorUnit == CalculatorUnit || CalculatorUnit > CalculatorUnit) || CalculatorUnit != floor(66))
+				&& floor(param) > floor(param) && floor(param) > CalculatorUnit) {
+		}
+
+		double y = (((((floor(83) + floor(param) / CalculatorUnit) - floor(53) / CalculatorUnit * floor(param))) / CalculatorUnit) - floor(param)
+				* floor(11));
 	}
 
+	private static double floor(Number number) {
+		return 0;
+	}
 }

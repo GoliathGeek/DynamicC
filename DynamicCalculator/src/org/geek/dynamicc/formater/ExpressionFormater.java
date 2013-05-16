@@ -1,6 +1,5 @@
 package org.geek.dynamicc.formater;
 
-
 import org.geek.dynamicc.Expression;
 import org.triple.common.extension.SPI;
 
